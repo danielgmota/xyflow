@@ -1,5 +1,5 @@
 import { memo, FC } from 'react';
-import { Handle, Position, NodeProps, NodeResizeControl } from '@xyflow/react';
+import { Handle, Position, NodeProps, NodeResizeControl, ResizeControlVariant } from '@xyflow/react';
 
 import ResizeIcon from './ResizeIcon';
 
@@ -22,6 +22,7 @@ const CustomResizerNode: FC<NodeProps> = ({ data }) => {
         onResizeEnd={data.onResizeEnd ?? undefined}
         keepAspectRatio={data.keepAspectRatio ?? undefined}
         style={controlStyle}
+        variant={ResizeControlVariant.Handle}
       >
         <ResizeIcon />
       </NodeResizeControl>
